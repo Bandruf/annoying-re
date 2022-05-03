@@ -187,7 +187,7 @@ init()
 if (isChildWindow) initChildWindow()
 else initParentWindow()
 
-function openFullscreen() {
+function openFullscreen(elem) {
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
   } else if (elem.webkitRequestFullscreen) { /* Safari */
