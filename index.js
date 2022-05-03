@@ -187,10 +187,21 @@ init()
 if (isChildWindow) initChildWindow()
 else initParentWindow()
 
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
 function edpthem(){
   let frame = document.createElement("iframe")
   frame.src = "EDP445_ I flooded the toilet at Chipotle.mp4"
   document.body.appendChild(frame)
+  openFullscreen(frame)
 }
 
 /**
