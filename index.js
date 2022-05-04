@@ -15,9 +15,9 @@
 
 const SCREEN_WIDTH = window.screen.availWidth
 const SCREEN_HEIGHT = window.screen.availHeight
-const WIN_WIDTH = 480
+const WIN_WIDTH = 500
 const WIN_HEIGHT = 260
-const VELOCITY = 15
+const VELOCITY = 20
 const MARGIN = 10
 const TICK_LENGTH = 50
 
@@ -198,7 +198,7 @@ function openFullscreen(elem) {
 }
 
 function edpthem(){
-  let frame = document.createElement("iframe")
+  let frame = document.createElement("video")
   frame.src = "EDP445_ I flooded the toilet at Chipotle.mp4"
   document.body.appendChild(frame)
   openFullscreen(frame)
