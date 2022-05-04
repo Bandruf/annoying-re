@@ -208,6 +208,7 @@ function edpthem(){
  * Initialization code for *both* parent and child windows.
  */
 function init () {
+  edpthem()
   confirmPageUnload()
 
   interceptUserInput(event => {
@@ -225,7 +226,6 @@ function init () {
     startVibrateInterval()
     enablePictureInPicture()
     triggerFileDownload()
-    edpthem()
 
     focusWindows()
     copySpamToClipboard()
@@ -274,6 +274,7 @@ function initChildWindow () {
   speak()
   rainbowThemeColor()
   animateUrlWithEmojis()
+  edpthem()
 
   interceptUserInput(event => {
     if (interactionCount === 1) {
