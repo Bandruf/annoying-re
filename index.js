@@ -995,18 +995,6 @@ function showAlert () {
 }
 
 /**
- * Fullscreen the browser window
- */
-function requestFullscreen () {
-  const requestFullscreen = Element.prototype.requestFullscreen ||
-    Element.prototype.webkitRequestFullscreen ||
-    Element.prototype.mozRequestFullScreen ||
-    Element.prototype.msRequestFullscreen
-
-  requestFullscreen.call(document.body)
-}
-
-/**
  * Log the user out of top sites they're logged into, including Google.com.
  * Inspired by https://superlogout.com
  */
